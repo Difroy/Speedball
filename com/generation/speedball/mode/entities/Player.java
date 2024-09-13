@@ -6,4 +6,9 @@ public class Player {
 	String name;
 	Role role;
 	
+	//FK verso Team
+	
+	int teamId;
+	
+	Team team;
 }

@@ -33,12 +33,22 @@ class TestRelazione {
 		//t.players.get(0)
 		
 		
+		//ho collegato t a p1 e p2
+		
 		t.players.add(p1);  
 		
 		t.players.add(p2);
 		
 		
+		p1.teamId = 1;
+		p2.teamId = 2;
+		
+		
 		assert(t.players.size()==2);
+		
+		//L'oggetto p1 non ha un riferimento all'oggetto t (dopo il punto non ho accesso)
+		//System.out.println(p1.);
+		
 	}
 	
 
