@@ -11,6 +11,7 @@ class TestRelazione {
 
 		Team t = new Team();
 		t.id = 1;
+		t.name = "Brutal Deluxe";
 
 	}
 

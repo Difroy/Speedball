@@ -2,6 +2,6 @@ package com.generation.speedball.mode.entities;
 
 public enum Role {
 
-	DEF,MID,ATT;
+	DEF,MID,ATK;
 	
 }
