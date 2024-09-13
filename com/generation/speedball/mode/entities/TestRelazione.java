@@ -36,6 +36,9 @@ class TestRelazione {
 		t.players.add(p1);  
 		
 		t.players.add(p2);
+		
+		
+		assert(t.players.size()==2);
 	}
 	
 
