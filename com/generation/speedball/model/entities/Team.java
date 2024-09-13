@@ -1,4 +1,4 @@
-package com.generation.speedball.mode.entities;
+package com.generation.speedball.model.entities;
 
 import java.util.ArrayList;
 import java.util.List;

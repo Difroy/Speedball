@@ -1,4 +1,4 @@
-package com.generation.speedball.mode.entities;
+package com.generation.speedball.model.entities;
 
 public class Player {
 
@@ -10,5 +10,6 @@ public class Player {
 	
 	int teamId;
 	
+	//Collegamento al lato T
 	Team team;
 }

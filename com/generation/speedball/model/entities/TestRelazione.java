@@ -1,4 +1,4 @@
-package com.generation.speedball.mode.entities;
+package com.generation.speedball.model.entities;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,9 +44,11 @@ class TestRelazione {
 		p2.teamId = 2;
 		
 		
+		
+		
 		assert(t.players.size()==2);
 		
-		//L'oggetto p1 non ha un riferimento all'oggetto t (dopo il punto non ho accesso)
+		//L'oggetto p1 non ha un riferimento all'oggetto t (dopo il punto non ho accesso. Valido solo per le variabili prima della riga 13 della classe Player)
 		//System.out.println(p1.);
 		
 	}
