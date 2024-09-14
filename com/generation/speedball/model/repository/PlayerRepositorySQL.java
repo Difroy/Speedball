@@ -23,8 +23,35 @@ public class PlayerRepositorySQL implements PlayerRepository {
 
 	@Override
 	public void insert(Player player) {
+		
+		try {
+			
+			String sql = "INSERT INTO player(id, name, role, teamid) VALUES (?,?,?,?)";
+			PreparedStatement preparazioneSQL = connessioneAlDatabase.prepareStatement(sql);
+			preparazioneSQL.setInt(1, player.getId());
+			preparazioneSQL.setString(2, player.getName());
+			preparazioneSQL.setString(3, String.valueOf(player.getRole()));
+			preparazioneSQL.setInt(4, player.getTeamId());
+			
+			preparazioneSQL.execute();
+			
+		
+			
+			
+
+			/*LEGGERE RIGA PER RIGA UNA TABELLA AL FARE UN SELECT*/
+			
+			
+			
+		}catch(SQLException e) {
+			throw new RuntimeException (e.getMessage());
+			
+		}
 
 	}
+	
+	
+	
 
 	@Override
 	public Player findById(int id) {
@@ -91,13 +118,47 @@ public class PlayerRepositorySQL implements PlayerRepository {
 
 	@Override
 	public void update(Player player) {
-		// TODO Auto-generated method stub
+		
+		
+		try {
+			String sql = "UPDATE player SET name = ?,role = ?,teamid = ? WHERE id = ?";
+		
+		PreparedStatement preparazioneSQL = connessioneAlDatabase.prepareStatement(sql);
+		
+		preparazioneSQL.setString(1, player.getName());
+		preparazioneSQL.setString(2, String.valueOf(player.getRole()));
+		preparazioneSQL.setInt(3, player.getTeamId());
+		preparazioneSQL.setInt(4, player.getId());
+		
+		
+		preparazioneSQL.execute();
+	
+		
+		
+		}catch (SQLException e) {
+			throw new RuntimeException (e.getMessage());
+		}
+		
+		
+		
 
 	}
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		
+		try {
+			String sql = "DELETE from player WHERE id=?";
+		PreparedStatement preparazioneSQL = connessioneAlDatabase.prepareStatement(sql);
+		
+		preparazioneSQL.setInt(1, id);
+		
+		
+		preparazioneSQL.execute();
+		}catch(SQLException e) {
+			throw new RuntimeException (e.getMessage());
+		}
+		
 
 	}
 
