@@ -17,7 +17,7 @@ public interface PlayerRepository {
 	
 	
 	
-	/*Non avendo bisogno di un ritorno dal database, uso solamente il tipo di ritorno void*/
+/*Non avendo bisogno di un ritorno dal database, uso solamente il tipo di ritorno void*/
 	
 	
 }
