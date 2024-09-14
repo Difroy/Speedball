@@ -16,17 +16,18 @@ public class ConnectionFactory {
 			
 			
 		}catch (Exception e) {
-			
-			
-		}
-		
-		
-		
-		
+			e.printStackTrace();
+			System.exit(1);
+		}	
 	}
 	
 	
-	
+	public static Connection make()
+	{
+		
+		return REALCONNECTION;
+		
+	}
 
 	
 	
