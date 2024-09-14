@@ -75,13 +75,39 @@ public class TeamRepositorySQL implements TeamRepository {
 	@Override
 	public void update(Team team) 
 	{
+		String sql = "update team set name = ?, budget = ? where id = ?";
 		
+		try 
+		{
+			PreparedStatement ps = connessioneAlDatabase.prepareStatement(sql);
+			ps.setString(1, team.getName());
+			ps.setInt(2, team.getBudget());
+			ps.setInt(3, team.getId());
+			
+			ps.execute();
+		} 
+		catch (SQLException e) 
+		{
+			throw new RuntimeException(e.getMessage());
+		}
 	}
 
 	@Override
 	public void delete(int id) 
 	{
+		String sql = "delete from team where id = ?";
 		
+		try 
+		{
+			PreparedStatement ps = connessioneAlDatabase.prepareStatement(sql);
+			ps.setInt(1, id);
+			
+			ps.execute();
+		} 
+		catch (SQLException e) 
+		{
+			throw new RuntimeException(e.getMessage());
+		}
 	}
 	
 	
