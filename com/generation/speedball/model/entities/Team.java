@@ -8,7 +8,6 @@ public class Team {
 	int id;
 	String name;  //BRUTAL DELUXE
 	int budget;
-	
 	//Lista dei miei player, dei miei lato n
 	//questo è un collegamente dal lato 1 al lato n
 	List<Player>players = new ArrayList<Player>();
@@ -43,11 +42,7 @@ public class Team {
 
 	public void setPlayers(List<Player> players) {
 		this.players = players;
-	}
-	
-	
-	
-	
+	}	
 }
 
 
