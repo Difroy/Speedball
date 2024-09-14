@@ -12,4 +12,35 @@ public class Player {
 	
 	//Collegamento al lato T
 	Team team;
+	
+	public void setId (int id) {
+		this.id = id;	
+	}
+	public int getId () {
+		return id;
+	}
+	public void setName (String name) {
+		this.name = name;
+	}
+	public String getName(){
+		return name;
+	}
+	public Role getRole() {
+		return role;
+	}
+	public void setRole(Role role) {
+		this.role = role;
+	}
+	public int getTeamId() {
+		return teamId;
+	}
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
+	}
+	public Team getTeam() {
+		return team;
+	}
+	public void setTeam(Team team) {
+		this.team = team;
+	}
 }
