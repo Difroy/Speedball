@@ -20,9 +20,9 @@ class TestRelazione {
 		p1.role = Role.DEF;
 		
 		Player p2 = new Player();
-		p1.id = 2;
-		p1.name = "Maria Chiara";
-		p1.role = Role.ATK;
+		p2.id = 2;
+		p2.name = "Maria Chiara";
+		p2.role = Role.ATK;
 		// t 		  is_a Team
 		// t.players  is_a List<Player> 
 		
