@@ -55,6 +55,7 @@ class TestRelazione {
 		
 		assert(t.players.size()==2);
 		assert(t.players.get(1).name.equals("Maria Chiara"));
+		//Team=>List<Player>=>Player=>String=>boolean
 		assert(p1.team.name.equals("Brutal Deluxe"));
 		
 		
