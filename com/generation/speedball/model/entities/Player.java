@@ -7,11 +7,34 @@ public class Player {
 	Role role;
 	
 	//FK verso Team
-	
 	int teamId;
 	
 	//Collegamento al lato T
 	Team team;
+	
+
+	
+	public void setTeam(Team newTeam)
+	{
+		this.team = newTeam;
+		this.teamId = newTeam.id;
+	}	
+		
+	
+	public Team getTeam() {
+		return team;
+	}
+	
+
+	
+	public void setTeamId(int teamId) {
+		this.teamId = teamId;
+	}
+
+	public int getTeamId() {
+		return teamId;
+	}
+
 	
 	public void setId (int id) {
 		this.id = id;	
@@ -31,16 +54,5 @@ public class Player {
 	public void setRole(Role role) {
 		this.role = role;
 	}
-	public int getTeamId() {
-		return teamId;
-	}
-	public void setTeamId(int teamId) {
-		this.teamId = teamId;
-	}
-	public Team getTeam() {
-		return team;
-	}
-	public void setTeam(Team team) {
-		this.team = team;
-	}
+	
 }

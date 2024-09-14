@@ -50,7 +50,7 @@ class TestRelazione {
 		
 		assert(t.players.size()==2);
 		
-		assert()
+		
 		
 		//L'oggetto p1 non ha un riferimento all'oggetto t (dopo il punto non ho accesso. Valido solo per le variabili prima della riga 13 della classe Player)
 		//System.out.println(p1.);
