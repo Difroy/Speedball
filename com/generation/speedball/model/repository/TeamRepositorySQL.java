@@ -2,6 +2,7 @@ package com.generation.speedball.model.repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 import com.generation.speedball.model.entities.Team;
 
@@ -16,8 +17,18 @@ public class TeamRepositorySQL implements TeamRepository {
 	public void insert(Team team) {
 	
 		
-		 PreparedStatement preparazioneSQL = connessioneAlDatabase(sql);
-		 
+		try {
+			
+			String sql = "INSERT INTO player(id, name, role, teamid) VALUES (?,?,?,?)";
+			PreparedStatement preparazioneSQL = connessioneAlDatabase.prepareStatement(sql);
+			
+		}catch (SQLException e) {
+			throw new RuntimeException (e.getMessage());
+		}
+		
+		
+		
+	
 		
 		
 		
