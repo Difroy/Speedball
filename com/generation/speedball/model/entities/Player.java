@@ -55,4 +55,10 @@ public class Player {
 		this.role = role;
 	}
 	
+	
+	
+	/*public int StampaNumeri (int...numeri) {
+		
+	}*/
+	
 }

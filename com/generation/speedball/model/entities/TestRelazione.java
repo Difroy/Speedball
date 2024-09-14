@@ -13,7 +13,7 @@ class TestRelazione {
 		Team t = new Team();
 		t.id = 1;
 		t.name = "Brutal Deluxe";
-
+		t.budget = 2000;
 		Player p1 = new Player();
 		p1.id = 1;
 		p1.name = "Ferdinando";
@@ -36,19 +36,26 @@ class TestRelazione {
 		//ho collegato t a p1 e p2
 		
 		t.players.add(p1);  
-		
 		t.players.add(p2);
 		
 		
-		p1.teamId = 1;			
-		// p1.team = t;
-		p2.teamId = 2;
-		// p2.team = t;
+	/*	p1.team = t;
+		p1.teamId = t.id;		
+		
+		p2.teamId = t.id;
+		p2.team = t;
+		
+	*/	
+		 
+		p1.setTeam(t);		// p1.team = t;
+		p2.setTeam(t);		// p2.team = t;
 		
 		
-		
+	
 		
 		assert(t.players.size()==2);
+		assert(t.players.get(1).name.equals("Maria Chiara"));
+		assert(p1.team.name.equals("Brutal Deluxe"));
 		
 		
 		
